@@ -1,4 +1,4 @@
-# Snippets and Tools for use with Tezos
+# Snippets and Tools for Use with Tezos
 <b>Introduction</b>
 
 While using Tesoz I figured out, that a Tezos private key can be given in short or in long form. Importing a short private key from one wallet into another wallet failed. I took a deeper look into this problem. The result was that I installed everything to program tools I need to overcome my problems. I am now able to write different tools, which can be used together with Tezos. The first result was a snippet or tool which converts a short Ed25519 seed (secret key, 32 bytes) to a secret exponent (secret key, 64 bytes). From the Tezos point of view short and long versions of the secret key works the same way. For the wallets it makes a difference.
