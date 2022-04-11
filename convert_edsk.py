@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Convert short edsk to full edsk."""
+# pylint: disable=C0103
 
 # Import Key from pytezos.crypto.key
 from pytezos.crypto.key import Key
