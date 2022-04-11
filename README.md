@@ -5,5 +5,5 @@ While using crypto coins I figured out, that a Tezos private key can be short or
 
 Development will be done on different Linux distributions using Python3. For Tezos the Python module PyTezos does, what I am expected from. Snippets are in the pipeline for creating accounts, making transactions, requesting account and balance informations as well as delegation of a given account to a new baker. 
 
-Small donations are welcome:
+Small donations are welcome:\n
 tz1SAXFTMxyer8MGuUya4aALDm6j3185ivJt 
