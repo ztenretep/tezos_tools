@@ -9,7 +9,7 @@
 
 <p align="justify">Development will be done on different Linux distributions using Python3. For Tezos the Python module PyTezos does, what one is expected from. Snippets or/and tools are in the pipeline for creating accounts, making transactions, requesting account and balance informations as well as delegating of a given account to a new baker. Open issue is how to get all Tezos transactions of the past in a short period of time.</p>
 
-<h3>Lesson Learned</h3>
+<h3>Lessons Learned</h3>
 
 <p align="justify">Delegation of an account to a baker is somehow tricky. A delegation to yourself is registering yourself as baker. The problem doing this is that this account cannot be unregistered. This seems a be a restriction of PyTezos or Tezos itself.</p>
 
