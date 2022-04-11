@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Create a public key from a 12 word mnemonic."""
+# pylint: disable=C0103
 
 # Remark:
 # The created Tezos address is valid and can be used directly, e.g. a Tezos
