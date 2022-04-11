@@ -13,11 +13,11 @@
 
 <p align="justify">I also learned up to now, that the funds of an account can be removed in principle down to 0,000001 ꜩ. I played arround with transactions and this was the result of doing so. It seems that a minimum amount of 0.275 ꜩ is needed for delegation not for the account itself.</p>
 
-<b>Prerequisite</b>
+<b>General Prerequisites</b>
 
-<p align="justify">Prerequisite for using the scripts is that PyTezos is installed. Follow the steps from https://pytezos.org to do so.</p>
+<p align="justify">General prerequisite for using the scripts is that PyTezos is installed. Installation can be done from PyPi using pip. Python3 is automatically pre-installed in the newer Linux distributions. At the moment I am using Python 3.8 as standard version. I generally limit myself to Linux or its derivatives. Taking care on other OS is not done.</p>
 
-<b>Final remark</b>
+<b>Final Remark</b>
 
 <p align="justify">If you like the snippets or/and little tools and if you find it helpful to use, I appreciate a small donation to my Tezos public key address:</p>
 
