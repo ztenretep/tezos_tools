@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Convert short edsk to full edsk."""
 
 # Import Key from pytezos.crypto.key
 from pytezos.crypto.key import Key
