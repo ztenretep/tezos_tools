@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+"""Create a public key from a 12 word mnemonic."""
 
 # Remark:
-# The created Tezos addresses are valid and can be used directly, e.g. a Tezos
+# The created Tezos address is valid and can be used directly, e.g. a Tezos
 # amount can be sent to this address. However, e.g. the amount contained cannot
-# be delegated to a baker. For this purpose it is necessary to obtain a reveal
-# key.
+# be delegated to a baker or can be used for a transaction. For this purpose it
+# is necessary to obtain a reveal key.
 
 # Import Python modules.
 from pytezos.crypto.key import Key
