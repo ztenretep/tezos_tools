@@ -9,6 +9,7 @@ The balance is stored in form of a string. This string has to be converted into
 a decimal number to get the Tezos value. The Tezos subunit is 0.000001 Mutez.
 This results in the underlying calculation rule.
 """
+# pylint: disable=C0103
 
 # Import Python modules.
 from decimal import Decimal
