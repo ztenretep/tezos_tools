@@ -14,6 +14,7 @@ For demonstration purposes error messages are not catched.
 # pylint: disable=W0212
 # pylint: disable=W0702
 # pylint: disable=W0611
+# pylint: disable=C0301
 
 # Import the standard Python modules.
 import json
@@ -47,15 +48,15 @@ except:
     os._exit(1)
 
 # Get numbers after the decimal point.
-numbers = Decimal(amount).as_tuple().exponent
+numbers = len(str(amount).split('.')[1])
 
 # Print a warning if numbers is larger than 6.
-if numbers <= -6:
+if numbers > 6:
     print("The given amount will be truncated and rounded (up/down) to 6 numbers after the decimal point.")
 
 # Finally get the amount for transaction.
-#amount = Decimal(str(amount)).quantize(Decimal('0.000001'), rounding=ROUND_DOWN)
-amount = Decimal(str(amount)).quantize(Decimal('0.000001'), rounding=ROUND_UP)
+amount = Decimal(str(amount)).quantize(Decimal('0.000001'), rounding=ROUND_DOWN)
+#amount = Decimal(str(amount)).quantize(Decimal('0.000001'), rounding=ROUND_UP)
 
 # Prepare the transaction operation group.
 opg = pytezos.transaction(destination=destination, amount=Decimal(amount)).autofill().sign()
@@ -67,13 +68,10 @@ opg_run_operation = opg.run_operation()
 json_data = str(opg_run_operation)
 
 # Make sure that the data is of type json.
-json_data = json.dumps(ast.literal_eval(json_data))
+json_data = ast.literal_eval(json_data)
 
-# Create a json object from the jason data.
-json_obj = json.loads(json_data)
-
-# Create a json format string. Indent is set to 4.
-json_fmtstr = json.dumps(json_obj, indent=4)
+# Convert dictionary to string. Set indent to 4 for printing.
+json_data = json.dumps(json_data, indent=4)
 
 # Print the result of run operation.
-print("{0}{1}".format("\n", json_fmtstr))
+print("{0}{1}".format("\n", json_data))
