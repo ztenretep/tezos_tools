@@ -15,6 +15,8 @@ possible.
 
 If there is no error and 'source' and 'delegate' in the printed json data are
 different, then a real delegation would work.
+
+For demonstration purposes errors are not catched yet.
 """
 # pylint: disable=C0103
 
