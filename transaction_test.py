@@ -77,4 +77,3 @@ json_fmtstr = json.dumps(json_obj, indent=4)
 
 # Print the result of run operation.
 print("{0}{1}".format("\n", json_fmtstr))
-
