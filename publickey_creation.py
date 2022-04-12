@@ -2,9 +2,9 @@
 """Create a public key from a 12 word mnemonic.
 
 The created Tezos address is valid and can be used directly, e.g. a Tezos
-amount can be sent to this address. However, e.g. the amount contained cannot
-be delegated to a baker nor be used for a transaction. For this purpose it is
-necessary to obtain a reveal key.
+amount can be sent to this Tezos address. However, e.g. the amount contained
+cannot be delegated to a baker nor be used for a transaction. For this purpose
+it is necessary to obtain a reveal key.
 """
 # pylint: disable=C0103
 
