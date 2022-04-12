@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Convert short edsk to full edsk."""
+"""Convert short edsk to full edsk.
+
+The Tezos privatekey (secret key) is a Ed25519 seed (32 bytes) or a secret
+exponent (64 bytes) derived from the seed. Both variants are used in wallets.
+This script converts the Ed25519 seed variant in the secret exponent variant.
+"""
 # pylint: disable=C0103
 
 # Import Key from pytezos.crypto.key
