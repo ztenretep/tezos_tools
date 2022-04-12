@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Create a public key from a 12 word mnemonic."""
-# pylint: disable=C0103
+"""Create a public key from a 12 word mnemonic.
 
-# Remark:
-# The created Tezos address is valid and can be used directly, e.g. a Tezos
-# amount can be sent to this address. However, e.g. the amount contained cannot
-# be delegated to a baker or can be used for a transaction. For this purpose it
-# is necessary to obtain a reveal key.
+The created Tezos address is valid and can be used directly, e.g. a Tezos
+amount can be sent to this address. However, e.g. the amount contained cannot
+be delegated to a baker nor be used for a transaction. For this purpose it is
+necessary to obtain a reveal key.
+"""
+# pylint: disable=C0103
 
 # Import Python modules.
 from pytezos.crypto.key import Key
