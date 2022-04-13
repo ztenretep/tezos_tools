@@ -18,11 +18,10 @@ different, then a real delegation would work.
 
 For demonstration purposes errors are not catched yet.
 """
-# pylint: disable=C0103
+# pylint: disable=invalid-name
 
 # Import the standard Python modules.
 import json
-import ast
 
 # Import the third party Python modules.
 from pytezos import pytezos
@@ -31,7 +30,7 @@ from pytezos import pytezos
 TEZOS_NETWORK = "mainnet"
 
 # Get the secret key from the user input.
-secretkey = str(input("Secret key (private key): "))
+secretkey = input("Secret key (private key): ")
 
 # Get the baker Tezos address from the user input.
 pkh_baker = str(input("Public key hash (public key) of baker: "))
@@ -45,17 +44,8 @@ opg = pytezos.delegation(delegate=pkh_baker).autofill().sign()
 # Test the validity of the delegation.
 opg_run_operation = opg.run_operation()
 
-# Create json data from a dictionary.
-json_data = str(opg_run_operation)
-
-# Make sure that the data is of type json.
-json_data = json.dumps(ast.literal_eval(json_data))
-
-# Create a json object from the jason data.
-json_obj = json.loads(json_data)
-
 # Create a json format string. Indent is set to 4.
-json_fmtstr = json.dumps(json_obj, indent=4)
+json_fmtstr = json.dumps(opg_run_operation, indent=4)
 
 # Print the result of run operation.
 print("{0}{1}".format("\n", json_fmtstr))
