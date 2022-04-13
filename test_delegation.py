@@ -33,7 +33,7 @@ TEZOS_NETWORK = "mainnet"
 secretkey = input("Secret key (private key): ")
 
 # Get the baker Tezos address from the user input.
-pkh_baker = str(input("Public key hash (public key) of baker: "))
+pkh_baker = input("Public key hash (public key) of baker: ")
 
 # Create a new pytezos instance using the Tezos mainnet.
 pytezos = pytezos.using(shell=TEZOS_NETWORK, key=secretkey)
