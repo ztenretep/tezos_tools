@@ -19,7 +19,7 @@ LANGUAGE = 'english'
 # Get the 12 word mnemonic.
 mnemonic = Mnemonic(LANGUAGE).generate(STRENGTH)
 
-# Print a 12 word mnemonic.
+# Print the 12 word mnemonic.
 print("{1}{0}{2}{0}".format("\n", "12 word mnemonic:", mnemonic))
 
 # Create a secret key object.
