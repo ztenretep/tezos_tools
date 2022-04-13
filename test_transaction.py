@@ -10,15 +10,14 @@ Truncating the given Tezos amount can be controlled by ROUND_DOWN or ROUND_UP.
 
 For demonstration purposes error messages are not catched.
 """
-# pylint: disable=C0103
-# pylint: disable=W0212
-# pylint: disable=W0702
-# pylint: disable=W0611
-# pylint: disable=C0301
+# pylint: disable=invalid-name
+# pylint: disable=protected-access
+# pylint: disable=unused-import
+# pylint: disable=bare-except
+# pylint: disable=line-too-long
 
 # Import the standard Python modules.
 import json
-import ast
 import os
 from decimal import Decimal, ROUND_DOWN, ROUND_UP
 
@@ -29,16 +28,16 @@ from pytezos import pytezos
 TEZOS_NETWORK = "mainnet"
 
 # Get the secret key from the user input.
-secretkey = str(input("Secret key (private key): "))
+secretkey = input("Secret key (private key): ")
 
 # Create a new pytezos instance using the Tezos mainnet.
 pytezos = pytezos.using(shell=TEZOS_NETWORK, key=secretkey)
 
 # Get the Tezos address of the destination.
-destination = str(input("Destination (Tezos address): "))
+destination = input("Destination (Tezos address): ")
 
 # Get the Tezos address of the destination.
-amount = str(input("Amount of Tezos to transfer: "))
+amount = input("Amount of Tezos to transfer: ")
 
 # Try to create a floating point number.
 try:
@@ -55,8 +54,8 @@ if numbers > 6:
     print("The given amount will be truncated and rounded (up/down) to 6 numbers after the decimal point.")
 
 # Finally get the amount for transaction.
-amount = Decimal(str(amount)).quantize(Decimal('0.000001'), rounding=ROUND_DOWN)
 #amount = Decimal(str(amount)).quantize(Decimal('0.000001'), rounding=ROUND_UP)
+amount = Decimal(str(amount)).quantize(Decimal('0.000001'), rounding=ROUND_DOWN)
 
 # Prepare the transaction operation group.
 opg = pytezos.transaction(destination=destination, amount=Decimal(amount)).autofill().sign()
@@ -64,14 +63,8 @@ opg = pytezos.transaction(destination=destination, amount=Decimal(amount)).autof
 # Test the validity of the delegation.
 opg_run_operation = opg.run_operation()
 
-# Create json data from a dictionary.
-json_data = str(opg_run_operation)
-
-# Make sure that the data is of type json.
-json_data = ast.literal_eval(json_data)
-
 # Convert dictionary to string. Set indent to 4 for printing.
-json_data = json.dumps(json_data, indent=4)
+json_data = json.dumps(opg_run_operation, indent=4)
 
 # Print the result of run operation.
 print("{0}{1}".format("\n", json_data))
