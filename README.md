@@ -25,5 +25,4 @@
 
 <div class="snippet-clipboard-content position-relative overflow-auto" data-snippet-clipboard-copy-content="tz1SAXFTMxyer8MGuUya4aALDm6j3185ivJt"><pre><code>tz1SAXFTMxyer8MGuUya4aALDm6j3185ivJt</code></pre></div>
 
-
 <p>If you do so. Thank you very much! Every Mutez is welcome.</p>
