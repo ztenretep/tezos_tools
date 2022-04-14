@@ -19,8 +19,10 @@
 
 <p align="justify">General prerequisite for using the scripts is that PyTezos is installed. Installation can be done from PyPi using pip. Python3 is automatically pre-installed in the newer Linux distributions. At the moment I am using Python 3.8 as standard version. I generally limit myself to Linux or its derivatives. Taking care on other OS is not done. Python code check is done using Pylint.</p>
 
-<h2>Final Remark</h2>
+<h2>Donation</h2>
 
 <p align="justify">If you like the snippets or/and little tools and if you find it helpful to use, I appreciate a small donation to my Tezos public key address:</p>
 
-tz1SAXFTMxyer8MGuUya4aALDm6j3185ivJt 
+tz1SAXFTMxyer8MGuUya4aALDm6j3185ivJt
+
+<p>If you do so. Thank you very much! Every Mutez is welcome.</p>
