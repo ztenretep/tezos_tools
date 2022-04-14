@@ -23,7 +23,7 @@
 
 <p align="justify">If you like the snippets or/and little tools and if you find it helpful to use, I appreciate a small donation to my Tezos public key address:</p>
 
-<div class="snippet-clipboard-content position-relative overflow-auto" data-snippet-clipboard-copy-content="tz1SAXFTMxyer8MGuUya4aALDm6j3185ivJt"><pre>tz1SAXFTMxyer8MGuUya4aALDm6j3185ivJt</pre></div>
+<div class="snippet-clipboard-content position-relative overflow-auto" data-snippet-clipboard-copy-content="tz1SAXFTMxyer8MGuUya4aALDm6j3185ivJt"><pre><code>tz1SAXFTMxyer8MGuUya4aALDm6j3185ivJt</code></pre></div>
 
 
 <p>If you do so. Thank you very much! Every Mutez is welcome.</p>
