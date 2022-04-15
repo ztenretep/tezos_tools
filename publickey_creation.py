@@ -5,6 +5,9 @@ The created Tezos address is valid and can be used directly, e.g. a Tezos
 amount can be sent to this Tezos address. However, e.g. the amount contained
 cannot be delegated to a baker nor be used for a transaction. For this purpose
 it is necessary to obtain a reveal key.
+
+Meaningful languages for the mnemonic are english, french, italian, spanish,
+japanese and korean. Checkout PyPi for more language support.
 """
 # pylint: disable=C0103
 
