@@ -5,7 +5,7 @@
 
 ##Development Environment
 
-<p align="justify">Development will be done on different Linux installations which are based on Debian distributions. I generally don't use any other OS on desktop computer or laptop. I use systems based on AMD and ARM architecture. I use Bash or Python as programming language. In general Python is used in version 3. Python code check is done using Pylint.</p>
+<p align="justify">Development will be done on different Linux installations which are based on Debian distributions. I generally don't use any other OS on desktop computer or laptop. I use systems based on AMD and ARM architecture. I use Bash or Python as programming language. In general Python is used in version 3. Mainly PyTezos from PyPi is used for the Tezos developments. Python code check is done using Pylint.</p>
 
 ## Open Issues
 
@@ -16,10 +16,6 @@ Open issue is how to get all Tezos transactions of the past in a short period of
 <p align="justify">Delegation of an account to a baker is somehow tricky. A delegation to yourself is registering yourself as baker. The problem doing this is that this account cannot be unregistered. This seems a be a restriction of PyTezos or Tezos itself.</p>
 
 <p align="justify">I also learned up to now, that the funds of an account can be removed in principle down to 0,000001 ꜩ. I played arround with transactions and this was the result of doing so. It seems that a minimum amount of 0.275 ꜩ is needed for delegation not for the account itself.</p>
-
-## General Prerequisites
-
-<p align="justify">General prerequisite for using the scripts is that PyTezos is installed. Installation can be done from PyPi using pip. </p>
 
 <h2>Donation</h2>
 
