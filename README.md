@@ -5,7 +5,7 @@
 
 ## Development Environment
 
-<p align="justify">Development is done on various Linux installations based on Debian distributions. In general, I do not use other operating systems on desktop computers or laptops. The systems I use are based on AMD and ARM architecture. As a programming language, I prefer to use Bash or Python. Python is used in the current version 3. For Tezos developments mainly PyTezos from PyPi is used. The verification of the Python code is done with Pylint used in version 3. Mainly PyTezos from PyPi is used for the Tezos developments. Python code check is done using Pylint.</p>
+<p align="justify">Development is done on various Linux installations based on Debian distributions. In general, I do not use other operating systems on desktop computers or laptops. The systems I use are based on AMD and ARM architecture. As a programming language, I prefer to use Bash or Python. Python is used in the current version 3. For Tezos developments mainly PyTezos from PyPi is used. The verification of the Python code is done with Pylint.</p>
 
 ## Lessons Learned
 
