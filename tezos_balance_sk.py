@@ -6,8 +6,8 @@ from a given secret key (private key). Using the secret key the balance of the
 related Tezos account can be retrieved from the Tezos Mainnet.
 
 The balance is stored in form of a string. This string has to be converted into
-a decimal number to get the Tezos value. The Tezos subunit is 0.000001 Mutez.
-This results in the underlying calculation rule.
+a decimal number to get the Tezos value. The Tezos subunit is Mutez. 1 Mutez is
+0.000001 Tezos. This results in the underlying calculation rule.
 """
 # pylint: disable=C0103
 
