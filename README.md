@@ -15,7 +15,7 @@
 
 ## Open Issues
 
-<p align="justify">Unresolved is how to get all Tezos transactions of the past in a short period of time. It is not clear how to mint and burn Tezos NFT's.</p>
+<p align="justify">Unresolved is how to get all Tezos transactions of the past in a acceptable period of time. It is not clear how to mint Tezos NFT's.</p>
 
 <h2>Donation</h2>
 
