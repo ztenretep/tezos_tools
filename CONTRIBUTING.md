@@ -1,4 +1,4 @@
-# Contributing to Ztenretep
+# Contributing
 
 I love your input! I want to make contributing to this project as easy and transparent as possible, whether it's:
 
@@ -8,8 +8,8 @@ I love your input! I want to make contributing to this project as easy and trans
 - Proposing new features
 - Becoming a maintainer
 
-## I Develop with Github
-We use github to host code, to track issues and feature requests, as well as accept pull requests.
+## Development with Github
+I use github to host code, to track issues and feature requests, as well as accept pull requests.
 
 ## All Code Changes Happen Through Pull Requests
 Pull requests are the best way to propose changes to the codebase. We actively welcome your pull requests:
