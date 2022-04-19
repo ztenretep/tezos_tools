@@ -1,5 +1,19 @@
 #!/bin/usr/python3
-"""Create a simple Tezos paper wallet. """
+"""Creates a Tezos implicit account.
+
+Quick and dirty written script. Script combines the Tezos account
+creation with saving the necessary data to a PDF file. In this way
+it generates a so-called paper wallet. To make it handy the data is
+also given as QR codes.
+
+The third party Python modules FPDF2, mnemonic and PyTezos have to be
+installed.
+
+Short as well as full private key will be calculated and printed into
+the PDF file.
+
+Output is a PDF file which basename is the public key.
+"""
 # pylint: disable=C0103
 
 # Import the standard Python modules.
