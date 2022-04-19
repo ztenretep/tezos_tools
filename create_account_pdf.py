@@ -2,25 +2,33 @@
 """Create a simple Tezos paper wallet. """
 # pylint: disable=C0103
 
-# Import the Python modules.
+# Import the standard Python modules.
 import os
-from fpdf import FPDF
+
+# Import the third party Python modules.
 import qrcode
+from fpdf import FPDF
 from pytezos.crypto.key import Key
 from mnemonic import Mnemonic
 
-# Set the variables.
+# Set the mnemonic variables.
 STRENGTH = 128
 LANGUAGE = 'english'
+
+# ====================
+# Function create_qr()
+# ====================
+def create_qr(data, fn):
+    img = qrcode.make(data)
+    img.save(fn)
+    pdf.image(fn, x = None, y = None, w = 40, h = 40, type = '', link = '')
+    os.remove(fn)
 
 # Get the 12 word mnemonic.
 mnemonic = Mnemonic(LANGUAGE).generate(STRENGTH)
 
-# Print the 12 word mnemonic.
+# Print the 12 word mnemonic to screen.
 print("{1}{0}{2}{0}".format("\n", "12 word mnemonic:", mnemonic))
-
-# Set mn.
-mn = "{0}".format(mnemonic)
 
 # Create a secret key object.
 sk = Key.from_mnemonic(mnemonic=mnemonic, email='', passphrase='')
@@ -44,42 +52,62 @@ print("{1}{0}{2}".format("\n", "Public key hash (tezos address is public key):",
 # Create an instance of FPDF.
 pdf = FPDF(orientation='P', unit='mm', format='A4')
 
-# Create a new page.
+# Create a new PDF page.
 pdf.add_page()
 
-# Create content.
+# Set the font, style and size.
 pdf.set_font(family="Helvetica", style="B", size=16)
+
+# Write to PDF.
 pdf.cell(200, 10, txt="Tezos Paper Wallet", ln=1, align="L")
 
-pdf.set_font("Arial", size=12)
+# Set the font, style and size.
+pdf.set_font("Helvetica", size=12)
+
+# Write to PDF.
 pdf.cell(200, 10, txt="Mnemonic:", ln=1, align="L")
-pdf.cell(200, 10, txt=mn, ln=1, align="L")
+pdf.cell(200, 10, txt=mnemonic, ln=1, align="L")
 
-img = qrcode.make(mn)
-type(img)
-img.save("mn.png")
-pdf.image("mn.png", x = None, y = None, w = 60, h = 60, type = '', link = '')
-os.remove("mn.png")
+# Create QR code.
+fn = "mnemonic.png"
+create_qr(mnemonic, fn)
 
+# Create the PDF content.
 pdf.set_font("Arial", size=12)
+
+# Write to PDF.
 pdf.cell(200, 10, txt="Public key:", ln=1, align="L")
 pdf.cell(200, 10, txt=pkh, ln=1, align="L")
 
-img = qrcode.make(pkh)
-type(img)
-img.save("publickey.png")
-pdf.image("publickey.png", x = None, y = None, w = 60, h = 60, type = '', link = '')
-os.remove("publickey.png")
-
-pdf.cell(200, 10, txt="Private Key:", ln=1, align="L")
-pdf.set_font("Arial", size=8.5)
-pdf.cell(200, 10, txt=edsk_full, ln=1, align="L")
-
-img = qrcode.make(edsk_full)
-type(img)
-img.save("privatekey.png")
-pdf.image("privatekey.png", x = None, y = None, w = 60, h = 60, type = '', link = '')
-os.remove("privatekey.png")
+# Create QR code.
+fn = "pkh.png"
+create_qr(pkh, fn)
 
 # Write to PDF.
+pdf.cell(200, 10, txt="Private Key (short):", ln=1, align="L")
+
+# Set the font, style and size.
+pdf.set_font("Arial", size=12)
+
+# Write to PDF.
+pdf.cell(200, 10, txt=edsk, ln=1, align="L")
+
+# Create QR code.
+fn = "edsk.png"
+create_qr(edsk, fn)
+
+# Write to PDF.
+pdf.cell(200, 10, txt="Private Key (long):", ln=1, align="L")
+
+# Set the font, style and size.
+pdf.set_font("Arial", size=8.5)
+
+# Write to PDF.
+pdf.cell(200, 10, txt=edsk_full, ln=1, align="L")
+
+# Create QR code.
+fn = "edsk_full.png"
+create_qr(edsk_full, fn)
+
+# Write all to PDF.
 pdf.output(pkh + ".pdf")
