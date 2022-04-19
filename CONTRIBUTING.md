@@ -33,17 +33,14 @@ We use GitHub issues to track public bugs. Report a bug by opening a new issue; 
 - A quick summary and/or background
 - Steps to reproduce
   - Be specific!
-  - Give sample code if you can. [My stackoverflow question] includes sample code that *anyone* with a base R setup can run to reproduce what I was seeing
+  - Give sample code if you can.
 - What you expected would happen
 - What actually happens
 - Notes (possibly including why you think this might be happening, or stuff you tried that didn't work)
 
-People *love* thorough bug reports. I'm not even kidding.
-
 ## Use a Consistent Coding Style
 
-* 2 spaces for indentation rather than tabs
-* You can try running `npm run lint` for style unification
+* 4 spaces for indentation rather than tabs
 
 ## License
 By contributing, you agree that your contributions will be licensed under its MIT License.
