@@ -3,6 +3,12 @@
 
 After creating the Tezos implicit account data, the created data is written
 to a PDF file. This is similar to creating a simple Tezos paper wallet.
+
+The script shows how PDF files can be created. Besides text, graphics are
+included. Parts of the text is colored.
+
+Prerequisite is the installation of FPDF2. There are significant differences
+between FPDF and FPDF2. 
 """
 # pylint: disable=useless-return
 # pylint: disable=invalid-name
